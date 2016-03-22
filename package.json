@@ -13,6 +13,13 @@
   "keywords": [
     "performance"
   ],
+  "dependencies": {
+    "vigour-util": "^1.0.0"
+  },
+  "devDependencies": {
+    "tap-difflet": "0.4.0",
+    "tape": "4.4.0"
+  },
   "author": "jim de beer",
   "license": "ISC",
   "bugs": {
