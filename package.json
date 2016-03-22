@@ -1,0 +1,22 @@
+{
+  "name": "vigour-performance",
+  "version": "1.0.0",
+  "description": "performance test suite",
+  "main": "lib/index.js",
+  "scripts": {
+    "test": "node test | tap-difflet"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vigour-io/performance.git"
+  },
+  "keywords": [
+    "performance"
+  ],
+  "author": "jim de beer",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/vigour-io/performance/issues"
+  },
+  "homepage": "https://github.com/vigour-io/performance#readme"
+}
