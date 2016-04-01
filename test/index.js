@@ -2,7 +2,6 @@
 var test = require('tape')
 var perf = require('../')
 var isNumber = require('vigour-util/is/number')
-var perfTest = require('../test')
 
 test('time', function (t) {
   t.plan(1)
@@ -22,7 +21,9 @@ test('run', function (t) {
   }, 5)
 })
 
+// console.log(perf())
+
 function something () {}
 function somethingElse () {}
-perfTest(something, somethingElse, 2)
-perfTest(function () {}, somethingElse, 2)
+perf(something, somethingElse, 2)
+perf(function () {}, somethingElse, 2)
