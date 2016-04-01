@@ -17,7 +17,7 @@ perf.run(
 )
 
 // runs a tape test for you
-// passes as long as function a performs within 2 times the speed of function b
+// passes as long as function a executes within 2 times the speed of function b
 perf(function a () {}, function b (), 2)
 
 // some args
