@@ -1,6 +1,6 @@
 {
   "name": "vigour-performance",
-  "version": "1.2.2",
+  "version": "1.2.3",
   "description": "performance test suite",
   "main": "lib/index.js",
   "scripts": {
