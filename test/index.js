@@ -21,3 +21,8 @@ test('run', function (t) {
     t.equal(isNumber(time), true, 'time is a number')
   }, 5)
 })
+
+function something () {}
+function somethingElse () {}
+perfTest(something, somethingElse, 2)
+perfTest(function () {}, somethingElse, 2)
