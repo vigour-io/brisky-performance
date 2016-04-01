@@ -15,4 +15,12 @@ perf.run(
   },
   100 // loops (more means better results)
 )
+
+// runs a tape test for you
+// passes as long as function a performs within 2 times the result of option b
+perf(function a () {}, function b (), 2)
+
+// some args
+perf(a, b, margin, loop (default is 10), labelA, labelB)
+// by default the labels are the function names paased to perf
 ```
