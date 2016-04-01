@@ -2,6 +2,7 @@
 var test = require('tape')
 var perf = require('../')
 var isNumber = require('vigour-util/is/number')
+var perfTest = require('../test')
 
 test('time', function (t) {
   t.plan(1)
@@ -20,4 +21,3 @@ test('run', function (t) {
     t.equal(isNumber(time), true, 'time is a number')
   }, 5)
 })
-
