@@ -4,6 +4,7 @@
 [![Build Status](https://travis-ci.org/vigour-io/performance.svg?branch=master)](https://travis-ci.org/vigour-io/performance)
 [![js-standard-style](https://img.shields.io/badge/code%20style-standard-brightgreen.svg)](http://standardjs.com/)
 [![npm version](https://badge.fury.io/js/vigour-performance.svg)](https://badge.fury.io/js/vigour-performance)
+
 <!-- VDOC END -->
 
 Simple performance benchmarking tools (browser and node)
@@ -18,6 +19,7 @@ When called without arguments, returns the current time as precisely as possible
 When called with an argument, returns the difference between the current time and the time passed in as argument, in milliseconds
 - **param** startTime {number|array} - start time for elapsed time calculation
 - **returns** {number|array} time - Current time (in milliseconds) or elapsed time since `startTime`
+
 <!-- VDOC END -->
 
 ```javascript
@@ -33,6 +35,7 @@ var elapsedTime = time(startTime)
 - **param** {*function*} subject - the function to measure
 - **param** {*function*} callback - called when the measurement is done : `callback(averageRunTime, nbIterations)`
 - **param** {*number*} nbIterations - number of times to execute the subject function
+
 <!-- VDOC END -->
 
 ```javascript
@@ -61,7 +64,9 @@ run(
 - **param** {*number*} loop - Number of times to run the functions (default: `10`)
 - **param** {*string*} subjectLabel - Label for the subject function (default: the name of the function (`subject.name`))
 - **param** {*string*} referenceLabel - Label for the reference function (default: the name of the function (`reference.name`))
+
 <!-- VDOC END -->
+
 Uses [tape](https://www.npmjs.com/package/tape) internally, which produces [TAP](https://testanything.org/)(Test Anything Protocol) output.
 
 ```javascript
