@@ -12,13 +12,13 @@ Simple performance benchmarking tools (browser and node)
 ## Precise time measurement
 <!--VDOC.jsdoc time -->
 <!-- DON'T EDIT THIS SECTION (including comments), INSTEAD RE-RUN `vdoc` TO UPDATE -->
-#### time(startTime)
+#### var t = time(startTime)
 
 When called without arguments, returns the current time as precisely as possible as a number of milliseconds or an array (`[milliseconds, microseconds]`)
 
 When called with an argument, returns the difference between the current time and the time passed in as argument, in milliseconds
-- **param** startTime {number|array} - start time for elapsed time calculation
-- **returns** {number|array} time - Current time (in milliseconds) or elapsed time since `startTime`
+- **startTime** (*number|array*) - start time for elapsed time calculation
+- **returns** (*number|array*) t - Current time (in milliseconds) or elapsed time since `startTime`
 
 <!-- VDOC END -->
 
@@ -32,9 +32,9 @@ var elapsedTime = time(startTime)
 <!-- VDOC.jsdoc run -->
 <!-- DON'T EDIT THIS SECTION (including comments), INSTEAD RE-RUN `vdoc` TO UPDATE -->
 #### run(subject, callback, nbIterations)
-- **param** {*function*} subject - the function to measure
-- **param** {*function*} callback - called when the measurement is done : `callback(averageRunTime, nbIterations)`
-- **param** {*number*} nbIterations - number of times to execute the subject function
+- **subject** (*function*) - the function to measure
+- **callback** (*function*) - called when the measurement is done : `callback(averageRunTime, nbIterations)`
+- **nbIterations** (*number*) - number of times to execute the subject function
 
 <!-- VDOC END -->
 
@@ -58,12 +58,12 @@ run(
 <!-- VDOC.jsdoc perf -->
 <!-- DON'T EDIT THIS SECTION (including comments), INSTEAD RE-RUN `vdoc` TO UPDATE -->
 #### perf(subject, reference, margin, loop, subjectLabel, referenceLabel)
-- **param** {*function*} subject - function to measure
-- **param** {*function*} reference - function to compare with `subject`
-- **param** {*number*} margin - number of times faster `subject` must be compared to `reference` for the test to pass
-- **param** {*number*} loop - Number of times to run the functions (default: `10`)
-- **param** {*string*} subjectLabel - Label for the subject function (default: the name of the function (`subject.name`))
-- **param** {*string*} referenceLabel - Label for the reference function (default: the name of the function (`reference.name`))
+- **subject** (*function*) - function to measure
+- **reference** (*function*) - function to compare with `subject`
+- **margin** (*number*) - number of times faster `subject` must be compared to `reference` for the test to pass
+- **loop** (*number*) - Number of times to run the functions (default: `10`)
+- **subjectLabel** (*string*) - Label for the subject function (default: the name of the function (`subject.name`))
+- **referenceLabel** (*string*) - Label for the reference function (default: the name of the function (`reference.name`))
 
 <!-- VDOC END -->
 
