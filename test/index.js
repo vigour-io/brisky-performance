@@ -18,7 +18,7 @@ test('run', function (t) {
   }, (time, total) => {
     t.equal(cnt, total, 'loop 5 times')
     t.equal(isNumber(time), true, 'time is a number')
-  }, 5)
+  }, 10)
 })
 
 // console.log(perf())
