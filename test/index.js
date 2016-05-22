@@ -21,9 +21,26 @@ test('run', function (t) {
   }, 10)
 })
 
-// console.log(perf())
-
 function something () {}
 function somethingElse () {}
-perf(something, somethingElse, 2)
-perf(function () {}, somethingElse, 2)
+perf(something, somethingElse, 4)
+perf(function () {}, somethingElse, 4)
+
+test('type', function (t) {
+  function someFunction (a, b) {
+    perf.type.test(someFunction, a, b)
+  }
+  t.plan(2)
+  someFunction('hello', 1)
+  someFunction([ 1, 2 ], null)
+  t.same(perf.type.someFunction, {
+    a: { string: 1, array: 1 },
+    b: { number: 1, null: 1 }
+  }, 'correct measurement')
+  perf.type.test('customkey', someFunction, 1, 2)
+  t.same(perf.type.customkey, {
+    a: { number: 1 },
+    b: { number: 1 }
+  }, 'works with a custom key')
+  t.end()
+})
