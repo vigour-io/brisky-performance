@@ -24,10 +24,10 @@
     "tape": "^4.4.0"
   },
   "devDependencies": {
-    "tap-difflet": "0.4.0",
     "coveralls": "^2.11.9",
     "istanbul": "^0.4.3",
-    "standard": "^8.4.0"
+    "standard": "^8.4.0",
+    "tap-difflet": "0.4.0"
   },
   "author": "jim de beer",
   "license": "ISC",
