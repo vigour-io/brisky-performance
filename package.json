@@ -4,7 +4,7 @@
   "description": "performance test suite",
   "main": "lib/index.js",
   "scripts": {
-    "test": "node test/index.js | tap-difflet",
+    "test": "node test/index.js | tap-difflet && standard",
     "travis": "npm run cover -s && istanbul report lcov && ((cat coverage/lcov.info | coveralls) || exit 0) && standard",
     "cover": "istanbul cover --report none --print detail test/index.js"
   },
