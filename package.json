@@ -17,7 +17,8 @@
     "compare functions"
   ],
   "dependencies": {
-    "vigour-util": "^1.0.0",
+    "is-node": "^1.0.2",
+    "farmhash": "^1.2.1",
     "tape": "^4.4.0"
   },
   "devDependencies": {

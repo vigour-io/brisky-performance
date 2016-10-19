@@ -1,13 +1,12 @@
 'use strict'
-var test = require('tape')
-var perf = require('../')
-var isNumber = require('vigour-util/is/number')
+const test = require('tape')
+const perf = require('../')
 
 test('time', function (t) {
   t.plan(1)
   var start = perf.time()
   var end = perf.time(start)
-  t.equal(isNumber(end), true, 'time returns a number')
+  t.equal(!isNaN(end), true, 'time returns a number')
 })
 
 test('run', function (t) {
@@ -17,7 +16,7 @@ test('run', function (t) {
     cnt++
   }, (time, total) => {
     t.equal(cnt, total, 'loop 5 times')
-    t.equal(isNumber(time), true, 'time is a number')
+    t.equal(!isNaN(time), true, 'time is a number')
   }, 10)
 })
 
