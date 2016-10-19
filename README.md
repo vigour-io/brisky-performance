@@ -1,4 +1,4 @@
-# performance
+#brisky-performance
 Simple performance benchmarking tools (browser and node)
 
 [![Build Status](https://travis-ci.org/vigour-io/performance.svg?branch=master)](https://travis-ci.org/vigour-io/performance)
@@ -6,7 +6,9 @@ Simple performance benchmarking tools (browser and node)
 [![npm version](https://badge.fury.io/js/brisky-performance.svg)](https://badge.fury.io/js/brisky-performance)
 [![Coverage Status](https://coveralls.io/repos/github/vigour-io/brisky-performance/badge.svg?branch=master)](https://coveralls.io/github/vigour-io/brisky-performance?branch=master)
 
-## Precise time measurement
+-
+
+### Precise time measurement
 #### var t = time(startTime)
 
 When called without arguments, returns the current time as precisely as possible as a number of milliseconds or an array (`[milliseconds, microseconds]`)
@@ -21,7 +23,7 @@ var startTime = time()
 var elapsedTime = time(startTime)
 ```
 
-## Measuring a function's performance
+### Measuring a function's performance
 #### run(subject, callback, nbIterations)
 - **subject** (*function*) - the function to measure
 - **callback** (*function*) - called when the measurement is done : `callback(averageRunTime, nbIterations)`
@@ -43,7 +45,7 @@ run(
 )
 ```
 
-## Comparing functions
+### Comparing functions
 #### perf(subject, reference, margin, loop, subjectLabel, referenceLabel)
 - **subject** (*function*) - function to measure
 - **reference** (*function*) - function to compare with `subject`
