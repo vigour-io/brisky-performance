@@ -9,7 +9,7 @@ Simple performance benchmarking tools (browser and node)
 -
 #### Precise time measurement
 
-uses `hrTime` in node and `webkit.performance` if avaible in the browser
+uses `hrTime`, `webkit.performance` or `Date.now`
 
 ```javascript
 const { time } = require('brisky-performance')
