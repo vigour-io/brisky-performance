@@ -6,7 +6,8 @@
   "scripts": {
     "test": "node test/index.js | tap-difflet && standard",
     "travis": "npm run cover -s && istanbul report lcov && ((cat coverage/lcov.info | coveralls) || exit 0) && standard",
-    "cover": "istanbul cover --report none --print detail test/index.js"
+    "cover": "istanbul cover --report none --print detail test/index.js",
+    "dev": "nodemon test/index.js | tap-difflet"
   },
   "repository": {
     "type": "git",
@@ -27,7 +28,8 @@
     "coveralls": "^2.11.9",
     "istanbul": "^0.4.3",
     "standard": "^8.4.0",
-    "tap-difflet": "0.4.0"
+    "tap-difflet": "0.4.0",
+    "nodemon": "^1.10.2"
   },
   "author": "jim de beer",
   "license": "ISC",

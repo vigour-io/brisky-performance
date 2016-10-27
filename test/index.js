@@ -25,6 +25,16 @@ function somethingElse () {}
 perf(something, somethingElse, 4)
 perf(function () {}, somethingElse, 4)
 
+perf(() => {
+  for (let i = 0; i < 7e8; i++) {
+
+  }
+}, () => {
+  for (let i = 0; i < 7e8; i++) {
+
+  }
+}, 1.1, 1, 'large')
+
 test('type', function (t) {
   function someFunction (a, b) {
     perf.type.test(someFunction, a, b)
