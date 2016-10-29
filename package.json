@@ -1,6 +1,6 @@
 {
   "name": "brisky-performance",
-  "version": "1.4.0",
+  "version": "1.4.1",
   "description": "performance test suite",
   "main": "lib/index.js",
   "scripts": {
