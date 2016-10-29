@@ -6,7 +6,8 @@ Simple performance benchmarking tools (browser and node)
 [![npm version](https://badge.fury.io/js/brisky-performance.svg)](https://badge.fury.io/js/brisky-performance)
 [![Coverage Status](https://coveralls.io/repos/github/vigour-io/brisky-performance/badge.svg?branch=master)](https://coveralls.io/github/vigour-io/brisky-performance?branch=master)
 
--
+---
+
 #### Precise time measurement
 
 uses `hrTime`, `webkit.performance` or `Date.now`
@@ -20,7 +21,8 @@ const elapsed = time(start)
 When called without arguments, returns a time object
 When called with an argument, returns the difference between the current time and the time passed in as argument, in milliseconds
 
--
+---
+
 #### Comparing functions
 
 Compare a function vs another, usefull for writing perf tests
@@ -42,7 +44,8 @@ perf(() => {}, () => {}, 'some test')
 
 When passing a string to margin or loop it will become the label
 
--
+---
+
 #### Finding IC inconsistencies
 
 Helps finding type mismatches in functions, just counts them.
@@ -66,5 +69,6 @@ type.test('customkey', someFunction, 1, 2)
 type.customkey // → { a: { number: 1 }, b: { number: 1 } }
 ```
 
--
+---
+
 Uses [tape](https://www.npmjs.com/package/tape) internally, which produces [TAP](https://testanything.org/) (Test Anything Protocol) output.
