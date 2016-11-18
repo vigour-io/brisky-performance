@@ -35,6 +35,8 @@ perf(() => {
   }
 }, 1.1, 1, 'large')
 
+perf(something, somethingElse, 'label', 4, 4)
+
 test('type', function (t) {
   function someFunction (a, b) {
     perf.type.test(someFunction, a, b)
